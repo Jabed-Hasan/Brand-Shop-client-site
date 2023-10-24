@@ -16,8 +16,6 @@ const Brands = ({ data }) => {
                         src={image}
                         alt="ui/ux review check"
                     />
-                    
-                
                 </div>
             </Link>
            

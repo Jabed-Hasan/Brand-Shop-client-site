@@ -19,7 +19,7 @@ const BrandProducts = ({detail}) => {
 
                 <div className="btn-group btn-group-vertical space-y-4">
                     <button className="btn ">View</button>
-                    <Link to={`updateCoffee/${brandName}`}>
+                    <Link to={`update/${brandName}`}>
                     <button className="btn bg-slate-500">Edit</button>
                     </Link>
                     <button

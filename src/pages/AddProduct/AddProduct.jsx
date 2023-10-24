@@ -14,7 +14,7 @@ const AddProduct = () => {
         console.log(newProduct)
 
 
-        fetch('http://localhost:4000/myCart', {
+        fetch('http://localhost:4000/products', {
             method:'POST',
             headers:{
                 'content-type': 'application/json'

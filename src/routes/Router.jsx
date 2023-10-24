@@ -4,11 +4,13 @@ import Root from "../layout/Root";
 import Home from "../pages/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import Details from "../pages/Details/Details";
+import BrandsProducts from "../pages/Cards/BrandsProducts";
 import PrivateRoute from "./PrivateRoute";
 import Contac from "../pages/About/Contac"
 import AddProduct from "../pages/AddProduct/AddProduct";
 import MyCart from "../pages/MyCart/MyCart";
+import Products from "../pages/products/Products";
+import Details from "../pages/Details/Details";
 
 
 const routes = createBrowserRouter([
@@ -23,12 +25,11 @@ const routes = createBrowserRouter([
                 loader: () =>fetch('/Data.json')
             },
             {
-                path: '/data/:products',
+                path: '/products/:brandName',
                 element: <PrivateRoute>
-                    <Details>
-                    </Details>
+                    <Details></Details>
                 </PrivateRoute>,
-                loader: () => fetch('/Data.json')
+                loader: () => fetch(`http://localhost:4000/products`)
             },
             
             {
@@ -46,6 +47,13 @@ const routes = createBrowserRouter([
                 loader: () => fetch('http://localhost:4000/myCart')
             },
             {
+                path: '/Products',
+                element: <PrivateRoute>
+                    <Products></Products>
+                </PrivateRoute>,
+                loader: () => fetch('http://localhost:4000/products')
+            },
+            {
                 path: '/login',
                 element: <Login></Login>
             },
@@ -59,6 +67,7 @@ const routes = createBrowserRouter([
                 element: <Contac></Contac>
             },
             
+
 
 
 

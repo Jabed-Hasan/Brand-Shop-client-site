@@ -1,7 +1,5 @@
 import Swal from "sweetalert2";
 
-
-
 const CardDetail = ({ Detail }) => {
 
 
@@ -16,7 +14,7 @@ const CardDetail = ({ Detail }) => {
             <div className=" bg-clip-border text-gray-700 ">
 
 
-                <img className="w-full h-[550px]" src={banner_image} alt="" />
+                <img className="w-full h-[550px]" src="https://i.ibb.co/MV9cCXc/Screenshot-112.png" alt="" />
 
                 <div className='backdrop-brightness-50  w-full flex justify-between '>
                     <button className='btn bg-violet-600  hover:bg-blue-500 border-none text-white my-5 ml-10'>Organized by : {organizer}</button>
@@ -30,6 +28,7 @@ const CardDetail = ({ Detail }) => {
                     {paragraph}
                 </p>
             </div>
+            
             <div className="flex items-center justify-between p-6">
 
             </div>

@@ -1,31 +1,31 @@
-
 import { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 
 import Footer from '../footer/Footer';
-import CardDetail from '../Cards/CardDetail';
+
+import BrandsProducts from '../Cards/BrandsProducts';
 
 const Details = () => {
-    const [detail, setDetail] = useState({});
-    const { name } = useParams();
+    const { brandName } = useParams();
     const details = useLoaderData();
-    console.log(details)
-    
+    const [filteredProducts, setFilteredProducts] = useState([]);
+
     useEffect(() => {
-        if (Array.isArray(details)) {
-            const foundDetail = details.find((item) => item.name === name);
-            setDetail(foundDetail || {});
-        }
-    }, [name, details]);
+        // Filter the products based on the brandName
+        const filteredProducts = details.filter((item) => item.brandName === brandName);
+        setFilteredProducts(filteredProducts);
+    }, [brandName, details]);
 
     return (
         <div>
-            <CardDetail detail={detail} />
+            <div className='grid grid-cols-2 gap-8 ml-20 mr-20'>
+                {filteredProducts.map((detail) => (
+                    <BrandsProducts key={detail.brandName} detail={detail} />
+                ))}
+            </div>
             <Footer />
         </div>
     );
 };
-
-
 
 export default Details;

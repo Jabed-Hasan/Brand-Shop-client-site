@@ -3,7 +3,6 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Brands from './Cards/Brands';
 import Footer from './footer/Footer';
-
 import Banner from './Banner/Banner';
 
 

@@ -1,6 +1,10 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const Slider = () => {
+    
+    const data = useLoaderData();
+    console.log(data);
     return (
         <div>
             <div className="carousel w-full">

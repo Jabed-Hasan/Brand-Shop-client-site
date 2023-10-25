@@ -6,11 +6,11 @@ const AddProduct = () => {
         const name  = form.name.value;
         const price  = form.price.value;
         const brandName  = form.brandName.value;
-        const description  = form.description.value;
+        const details  = form.details.value;
         const rating  = form.rating.value;
-        const photo_url  = form.photo_url.value;
+        const image  = form.image.value;
 
-        const newProduct = {name,price,brandName,description,rating,photo_url}
+        const newProduct = {name,price,brandName,details,rating,image}
         console.log(newProduct)
 
 
@@ -78,11 +78,11 @@ const AddProduct = () => {
             </div>
             <div className="form-control w-1/2 ml-4">
                 <label className="label">
-                    <span className="label-text">Short Description</span>
+                    <span className="label-text">Short details</span>
                 </label>
                 <label className="input-group">
                     
-                    <input type="text" name="description" placeholder="Product Description" className="input input-bordered w-full" />
+                    <input type="text" name="details" placeholder="Product details" className="input input-bordered w-full" />
                 </label>
             </div>
         </div>
@@ -94,7 +94,7 @@ const AddProduct = () => {
                 </label>
                 <label className="input-group">
                     
-                    <input type="text" name="photo_url" placeholder="category " className="input input-bordered w-full" />
+                    <input type="text" name="image" placeholder="category " className="input input-bordered w-full" />
                 </label>
             </div>
             <div className="form-control w-1/2 ml-4">

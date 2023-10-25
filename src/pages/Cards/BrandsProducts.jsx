@@ -54,7 +54,9 @@ const BrandProducts = ({detail,details,setdetails}) => {
                 </div>
 
                 <div className="btn-group btn-group-vertical space-y-4">
-                    <button className="btn ">Details</button>
+                    <Link to={`productDetails/${_id}`}>
+                    <button className="btn bg-slate-500">Details</button>
+                    </Link>
                     <Link to={`update/${_id}`}>
                     <button className="btn bg-slate-500">Update</button>
                     </Link>

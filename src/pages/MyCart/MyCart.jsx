@@ -2,21 +2,14 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const MyCart = () => {
-  const product = useLoaderData();
-  console.log(product);
+  // const product = useLoaderData();
+  // console.log(product);
   
   return (
     <div>
-      <h1>Products: {product.length}</h1>
+      
      
-     {
-     product.map((products) => 
-         <div key={products._id}>
-          <h1>{products.name}</h1>
-         </div>
-
-      )
-     }
+     MyCaRt
     </div>
   );
 };

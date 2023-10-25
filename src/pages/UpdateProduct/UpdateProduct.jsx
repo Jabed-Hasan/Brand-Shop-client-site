@@ -17,8 +17,8 @@ const UpdateProduct = () => {
         const details  = form.details.value;
         const rating  = form.rating.value;
         const image  = form.image.value;
-
-        const UpdatedProduct = {name,price,brandName,details,rating,image}
+        const type = form.type.value
+        const UpdatedProduct = {name,price,brandName,details,rating,image,type}
         console.log(UpdatedProduct)
 
 
@@ -114,6 +114,11 @@ const UpdateProduct = () => {
         </div>
     </div>
     {/* form category ad Details Control */}
+    <div>
+            <label className ="label">
+            <input type="text" name="type" placeholder="Product category type " className="input input-bordered w-full" />
+            </label>
+            </div>
    
        
         <input type="submit" value="Update Product" className="btn btn-block bg-slate-600 text-white" />

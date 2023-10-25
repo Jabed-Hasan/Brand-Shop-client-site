@@ -38,19 +38,17 @@ const Register = () => {
           })
            return;
         }
+        
 
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
                 Swal.fire({
-                    title: 'Error!", "Password must contain at least eight characters, including one uppercase letter, one lowercase letter, one number, and one special character.", "error")',
-                    showClass: {
-                      popup: 'animate__animated animate__fadeInDown'
-                    },
-                    hideClass: {
-                      popup: 'animate__animated animate__fadeOutUp'
-                    }
-                  })
+                    title: 'Success!',
+                    text: 'Register Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  });
                 navigate(location?.state ? location.state : '/');
               
             })

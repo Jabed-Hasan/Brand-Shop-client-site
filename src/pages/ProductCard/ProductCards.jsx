@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 
 const ProductCards = (cart, carts, setCarts) => {
 
-    const { _id, name, price, brand, description, photo_url } = cart
+    const { _id, name, price, brand, details, image } = cart
     const handleDelete = _id=>  {
         console.log(_id);
         Swal.fire({
@@ -38,13 +38,13 @@ const ProductCards = (cart, carts, setCarts) => {
     }
     return (
         <div className="card card-side bg-base-100 shadow-xl">
-            <figure><img src={photo_url} alt="Movie" /></figure>
+            <figure><img src={image} alt="Movie" /></figure>
             <div className="flex justify-between w-full pr-4 ">
                 <div>
                     <h2 className="card-title">Name: {name}</h2>
                     <p>{price}</p>
                     <p>{brand}</p>
-                    <p>{description}</p>
+                    <p>{details}</p>
                 </div>
 
                 <div className="btn-group btn-group-vertical space-y-4">

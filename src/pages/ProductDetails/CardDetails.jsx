@@ -15,8 +15,6 @@ const CardDetails = () => {
 
     useEffect(() => {
         const findDetail = CardDetails?.find((Detail) => Detail.id == id)
-      
-           
         setDetail(findDetail);
 
     }, [id, CardDetails]);

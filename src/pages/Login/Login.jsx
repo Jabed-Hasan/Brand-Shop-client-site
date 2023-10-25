@@ -5,6 +5,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import Swal from "sweetalert2";
 
+
 const Login = () => {
     const { signIn } = useContext(AuthContext);
     const location = useLocation();
@@ -18,7 +19,12 @@ const Login = () => {
         signInWithPopup(Auth, Provider)
         .then(result => {
             console.log(result.user);
-            Swal("Good job!", "Logged in Successfully!", "success");
+            Swal.fire({
+                title: 'Success!',
+                text: 'Logged in Successfully',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              });
             // Navigate after login
             navigate(location?.state ? location.state : '/');
         })
@@ -46,7 +52,12 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 console.log(result.user);
-                Swal("Good job!", "Logged in Successfully!", "success");
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Logged in Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  });
                 // Navigate after login
                 navigate(location?.state ? location.state : '/');
             })

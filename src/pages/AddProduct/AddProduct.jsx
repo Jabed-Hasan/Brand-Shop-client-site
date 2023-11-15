@@ -14,7 +14,7 @@ const AddProduct = () => {
         console.log(newProduct)
 
 
-        fetch('http://localhost:4000/products', {
+        fetch('https://b8a10-brandshop-server-side-jabed-hasan-eal7884yj.vercel.app/products', {
             method:'POST',
             headers:{
                 'content-type': 'application/json'

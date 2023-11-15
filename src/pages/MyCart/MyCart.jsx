@@ -17,7 +17,7 @@ const MyCart = ({ cart, carts, setCarts }) => {
       }).then((result) => {
         if (result.isConfirmed) {
         
-        fetch(`http://localhost:4000/myCart/${_id}`,{
+        fetch(`https://b8a10-brandshop-server-side-jabed-hasan-eal7884yj.vercel.app/myCart/${_id}`,{
             method: 'DELETE'
         })
         .then(res => res.json())

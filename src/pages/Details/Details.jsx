@@ -12,7 +12,7 @@ const Details = () => {
     const fetchData = async () => {
         // Fetch product data for the given brandName
         try {
-            const response = await fetch(`http://localhost:4000/products/${brandName}`);
+            const response = await fetch(`https://b8a10-brandshop-server-side-jabed-hasan-eal7884yj.vercel.app/products/${brandName}`);
             if (response.ok) {
                 const data = await response.json();
                 setFilteredProducts(data);

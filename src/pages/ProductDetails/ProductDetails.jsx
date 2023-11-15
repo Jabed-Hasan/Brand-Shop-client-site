@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProvider";
+
 import Swal from "sweetalert2";
+import { AuthContext } from '../Register/providers/AuthProvider';
 
 const ProductDetails = () => {
   const Product = useLoaderData();
@@ -22,7 +23,7 @@ const ProductDetails = () => {
   };
 
   const handleCart = () => {
-    fetch('http://localhost:4000/myCart', {
+    fetch('https://b8a10-brandshop-server-side-jabed-hasan-eal7884yj.vercel.app/myCart', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

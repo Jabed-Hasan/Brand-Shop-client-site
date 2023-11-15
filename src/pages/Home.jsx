@@ -4,6 +4,7 @@ import { useLoaderData } from 'react-router-dom';
 import Brands from './Cards/Brands';
 import Footer from './footer/Footer';
 import Banner from './Banner/Banner';
+import App from '../App';
 
 
 
@@ -43,7 +44,9 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+                 
 
+                 <App></App>
                 
 
             <Footer></Footer>

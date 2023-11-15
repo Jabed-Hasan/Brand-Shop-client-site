@@ -1,9 +1,10 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { useContext } from "react";
-import { AuthContext } from "../../providers/AuthProvider";
+
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import Swal from "sweetalert2";
+import { AuthContext } from "../Register/providers/AuthProvider";
 
 
 const Login = () => {

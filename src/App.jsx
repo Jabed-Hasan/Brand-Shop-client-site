@@ -1,6 +1,5 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import styled from "styled-components";
 import Swal from "sweetalert2";
 
 const Contact = () => {
@@ -34,65 +33,44 @@ const Contact = () => {
 
   return (
 
-      <div>
-            <h1 className="text-4xl font-bold text-center">Send Your Openions</h1>
-         <StyledContactForm>
+      <div className="bg-state-100">
+            <p className="text-4xl font-bold text-center mb-5">Send Your Openions</p>
+        
     
-    <form ref={form} onSubmit={sendEmail}>
-      <label className="left-align">Name</label>
-      <input type="text" name="user_name" />
-      <label className="left-align">Email</label>
-      <input required type="email" name="user_email" />
-      <label className="left-align">Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
+    <form className="text-center flex flex-col items-center" ref={form} onSubmit={sendEmail}>
+    <div className="form-control w-1/3 ml-4">
+                <label className="label">
+                    <span className="label-text">Email</span>
+                </label>
+                <label className="input-group">
+                    
+                    <input type="text" name="name" required placeholder="Name" className="input input-bordered w-full" />
+                </label>
+            </div>
+    <div className="form-control w-1/3 ml-4">
+                <label className="label">
+                    <span className="label-text">Name</span>
+                </label>
+                <label className="input-group">
+                    
+                    <input type="text" name="email" placeholder="Email" required className="input input-bordered w-full" />
+                </label>
+            </div>
+    <div className="form-control w-1/3 ml-4 ">
+                <label className="label">
+                    <span className="label-text">Massage</span>
+                </label>
+                <label className="input-group">
+                    
+                    <input type="text" name="massage" placeholder="Write your Massage" className="pb-20 pt-3 input input-bordered w-full" />
+                </label>
+            </div>
+            <input type="submit" value="Send" className="btn w-1/3 ml-4 mt-5 bg-slate-600 text-white " />
     </form>
-  </StyledContactForm>
+ 
       </div>
   );
 };
 
-const StyledContactForm = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw; /* Use 100vw to cover the entire width of the viewport */
-
-  form {
-    width: 400px;
-    font-size: 16px;
-    text-align: center;
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 7px;
-      margin-bottom: 15px;
-      box-sizing: border-box;
-      outline: none;
-      border-radius: 5px;
-      border: 1px solid rgb(220, 220, 220);
-
-      &:focus {
-        border: 2px solid rgba(0, 206, 158, 1);
-      }
-    }
-
-    label.left-align {
-      text-align: left;
-      margin-top: 1rem;
-      display: block;
-    }
-
-    input[type="submit"] {
-      margin-top: 2rem;
-      cursor: pointer;
-      background: rgb(249, 105, 14);
-      color: white;
-      border: none;
-    }
-  }
-`;
 
 export default Contact;
